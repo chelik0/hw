@@ -1,0 +1,6 @@
+x = str(input())
+x = x.replace('<span>', '')
+x = x.replace('P</span>', '')
+x = x.replace('&nbsp;', '')
+x = int(x)
+print(x+1)

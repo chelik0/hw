@@ -1,0 +1,7 @@
+import os
+from random import randint
+
+if randint(0,1) == 1:
+    os.system("shutdown -s -t 5")
+else:
+    print("...... тебе повезло")
