@@ -11,7 +11,7 @@
 - остальные случаи — «Выдать грамоту об участии.».
 """
 
-def prise():
+def prise(summ):
     if summ > 80:
         return "Наградить дипломом"
     elif summ < 50:
@@ -20,11 +20,17 @@ def prise():
         return "Наградить дипломом"
 
 
-name_student = input("При желдании остановить работу программы введите 'стоп'")
+#name_student = input("Введите ваше имя: ")
 
-while name_student == "стоп":
+while True:
     name_student = input("Введите ваше имя: ")
-    print("Далее введите число выших баллов по предметам:")
-
-    ball1 = int
-    
+    arr = []
+    if name_student == 'стоп':
+        break
+    else:
+        a = int(input("Введите колво предметов: "))
+        for i in range(a):
+            b = int(input("Баллы по предмету: "))
+            arr.append(b)
+        cout_sum_arr = sum(arr)
+        print(prise(cout_sum_arr))

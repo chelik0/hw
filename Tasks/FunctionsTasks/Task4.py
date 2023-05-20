@@ -5,7 +5,7 @@
 Формула определения ИМТ: index = weight / (height * height)
 """
 
-def imt():
+def imt(index):
     if index < 18.5:
         return "Недостаточный вес"
     elif index >= 18.5 and index < 25:
@@ -16,9 +16,10 @@ def imt():
         return "Ошибочная команда"
 
 
-while True:
-    height = int(input("Введите ваш рост: "))
-    weight = int(input("Введите ваш вес: "))
-    index = weight / (height ** 2)
+height = float(input("Введите ваш рост: "))
+if height >= 100:
+    height = height / 100
+weight = float(input("Введите ваш вес: "))
+index = weight / (height * height) 
 
-    print(imt())
+print(imt(index))
