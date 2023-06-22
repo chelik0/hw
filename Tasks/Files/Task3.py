@@ -4,3 +4,16 @@
 файле должна начинаться с ее номера, двоеточия и пробела, после чего
 должен идти текст строки из исходного файла.
 """
+
+name = input("Введите имя исходного файла: ")
+
+name2 = input("Введите имя целевого файла: ")
+
+with open(name, "r") as file:
+    lines = file.readlines()
+
+with open(name2, "w") as file:
+    for i, line in enumerate(lines, start=1):
+        file.write(f"{i}: {line}")
+
+print("Файл создан.")

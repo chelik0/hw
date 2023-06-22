@@ -5,3 +5,20 @@
 Если 30 минут закончились или игрок вводит «off» — завершать работу.
 Оформить в виде функции.
 """
+from time import *
+
+
+def final(step, total):
+    while step != "off" or total != 1800:
+        start = time()
+        step = str(input("Введите ход (off - остановить): "))
+        if step == "off":
+            break
+        end = time()
+        total += end - start
+        print(f"Осталось времени: {int((1800 - total) / 60)} минут")
+
+step = ""
+total = 0
+final(step, total)
+

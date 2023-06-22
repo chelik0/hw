@@ -5,3 +5,8 @@
 Решить без применения библиотек
 """
 
+def test(word,num,**znach):
+    print(word, num, znach)
+
+
+test("Colors",2,red="#123123",blue = "#123123145")
